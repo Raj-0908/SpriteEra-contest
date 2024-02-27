@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Result Page</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<div class="container">
+  <h1>Result Page</h1>
+  <h1> You have completed the quiz</h1>
+  <div id="time-taken"></div>
+  <div id="chosen-options"></div>
+  <div id="score"></div>
+  <div id="autosubmitted-msg"></div>
+</div>
+<script>
+window.onload = function() {
+    var urlParams = new URLSearchParams(window.location.search);
+    var timeTaken = urlParams.get('time');
+    document.getElementById("time-taken").textContent = "Time taken: " + timeTaken + " seconds";
+
+    var chosenOptions = "";
+    urlParams.forEach(function(value, key) {
+        if (key.startsWith("question")) {
+            chosenOptions += key + ": " + value + "<br>";
+        }
+    });
+    document.getElementById("chosen-options").innerHTML = chosenOptions;
+
+    var totalRightAnswers = urlParams.get('totalRightAnswers');
+    var totalWrongAnswers = urlParams.get('totalWrongAnswers');
+    var score = "Total Right Answers: " + totalRightAnswers + "<br>";
+    score += "Total Wrong Answers: " + totalWrongAnswers;
+    document.getElementById("score").innerHTML = score;
+
+    // Auto-submit the form after displaying the results
+    setTimeout(function() {
+        document.getElementById("quiz-form").submit();
+        document.getElementById("autosubmitted-msg").textContent = "Form auto-submitted.";
+    }, 5000); // 5000 milliseconds = 5 seconds
+};
+</script>
+</body>
+</html>

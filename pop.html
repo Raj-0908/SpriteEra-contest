@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Question Page</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<div class="container">
+  <h1>Question Page</h1>
+  <div id="timer">5:00</div>
+  <form id="quiz-form" action="result.html" method="post">
+    <ol>
+      <li>
+        <h3>What is the capital of France?</h3>
+        <div class="options">
+          <label><input type="radio" name="question1" value="A"> Paris</label><br>
+          <label><input type="radio" name="question1" value="B"> London</label><br>
+          <label><input type="radio" name="question1" value="C"> Berlin</label><br>
+          <label><input type="radio" name="question1" value="D"> Rome</label><br>
+        </div>
+      </li>
+      <li>
+        <h3>What is the largest planet in our solar system?</h3>
+        <div class="options">
+          <label><input type="radio" name="question2" value="A"> Jupiter</label><br>
+          <label><input type="radio" name="question2" value="B"> Saturn</label><br>
+          <label><input type="radio" name="question2" value="C"> Neptune</label><br>
+          <label><input type="radio" name="question2" value="D"> Earth</label><br>
+        </div>
+      </li>
+      <li>
+        <h3>What is the chemical symbol for water?</h3>
+        <div class="options">
+          <label><input type="radio" name="question3" value="A"> H2O</label><br>
+          <label><input type="radio" name="question3" value="B"> CO2</label><br>
+          <label><input type="radio" name="question3" value="C"> O2</label><br>
+          <label><input type="radio" name="question3" value="D"> N2</label><br>
+        </div>
+      </li>
+      <li>
+        <h3>What is the tallest mountain in the world?</h3>
+        <div class="options">
+          <label><input type="radio" name="question4" value="A"> Mount Kilimanjaro</label><br>
+          <label><input type="radio" name="question4" value="B"> Mount Everest</label><br>
+          <label><input type="radio" name="question4" value="C"> K2</label><br>
+          <label><input type="radio" name="question4" value="D"> Mount Fuji</label><br>
+        </div>
+      </li>
+      <li>
+        <h3>Who wrote the play "Romeo and Juliet"?</h3>
+        <div class="options">
+          <label><input type="radio" name="question5" value="A"> William Shakespeare</label><br>
+          <label><input type="radio" name="question5" value="B"> Jane Austen</label><br>
+          <label><input type="radio" name="question5" value="C"> Charles Dickens</label><br>
+          <label><input type="radio" name="question5" value="D"> J.K. Rowling</label><br>
+        </div>
+      </li>
+    </ol>
+    <button type="submit" id="submit-btn">Submit</button>
+  </form>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
